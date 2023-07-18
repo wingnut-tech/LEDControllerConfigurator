@@ -37,6 +37,7 @@ table {
   border: 1px solid #ccc;
   border-spacing: 0;
   width: 30em;
+  background-color: #4c4e51;
 }
 
 #settings table {
@@ -70,6 +71,6 @@ tbody tr:hover {
 
 .thumbnail:hover {
   transform: scale(3);
-  background-color: #222529;
+  background-color: #4c4e51;
   box-shadow: 0 0 0 1px #ccc;
 }
