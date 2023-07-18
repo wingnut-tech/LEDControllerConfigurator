@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LED Controller v2 Configurator</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Firmware version: <span id="version"></span></h1>
+    <br>
+    <div id="layout">
+      <h1>Layout</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Wing LEDs:</td>
+            <td><input type="number" class="layoutNum" id="wing" min="0" max="255" value="31" /></td>
+            <td><input type="checkbox" class="layoutCheck" id="wingRev" /> Reverse?</td>
+          </tr>
+          <tr>
+            <td>Nose LEDs:</td>
+            <td><input type="number" class="layoutNum" id="nose" min="0" max="255" value="4" /></td>
+            <td><input type="checkbox" class="layoutCheck" id="noseRev" /> Reverse?</td>
+          </tr>
+          <tr>
+            <td>Fuse LEDs:</td>
+            <td><input type="number" class="layoutNum" id="fuse" min="0" max="255" value="18" /></td>
+            <td><input type="checkbox" class="layoutCheck" id="fuseRev" /> Reverse?</td>
+          </tr>
+          <tr>
+            <td>Tail LEDs:</td>
+            <td><input type="number" class="layoutNum" id="tail" min="0" max="255" value="8" /></td>
+            <td><input type="checkbox" class="layoutCheck" id="tailRev" /> Reverse?</td>
+          </tr>
+          <tr>
+            <td>Wing Nav LEDs:</td>
+            <td><input type="number" class="layoutNum" id="nav" min="0" max="31" value="8" /></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Nose/Fuse joined?</td>
+            <td><input type="checkbox" class="layoutCheck" id="noseFuseJoined" /></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div id="settings">
+      <h1>Show settings</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td class="col1"><input type="checkbox" checked="true" class="showCheck" id="navCheck" /></td>
+            <td class="col2">Navlights</td>
+            <td class="col3"><img class="thumbnail" src="gifs/nav.gif" width="46" height="34"/></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table>
+        <thead>
+          <tr>
+            <th class="col1">Show#</th>
+            <th class="col2">Name</th>
+            <th class="col3">Preview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck0" /><span class="showNum">0</span></td>
+            <td>Blank</td>
+            <td><img class="thumbnail" src="gifs/show00.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck1" /><span class="showNum">1</span></td>
+            <td>Rainbow</td>
+            <td><img class="thumbnail" src="gifs/show01.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck2" /><span class="showNum">2</span></td>
+            <td>Solid Rainbow</td>
+            <td><img class="thumbnail" src="gifs/show02.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck3" /><span class="showNum">3</span></td>
+            <td>Red</td>
+            <td><img class="thumbnail" src="gifs/show03.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck4" /><span class="showNum">4</span></td>
+            <td>Orange</td>
+            <td><img class="thumbnail" src="gifs/show04.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck5" /><span class="showNum">5</span></td>
+            <td>Yellow</td>
+            <td><img class="thumbnail" src="gifs/show05.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck6" /><span class="showNum">6</span></td>
+            <td>Green</td>
+            <td><img class="thumbnail" src="gifs/show06.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck7" /><span class="showNum">7</span></td>
+            <td>Blue</td>
+            <td><img class="thumbnail" src="gifs/show07.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck8" /><span class="showNum">8</span></td>
+            <td>Purple</td>
+            <td><img class="thumbnail" src="gifs/show08.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck9" /><span class="showNum">9</span></td>
+            <td>Teal</td>
+            <td><img class="thumbnail" src="gifs/show09.gif" width="46" height="34"/></td>
+          </tr>
+        <!-- </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Show#</th>
+            <th>Name</th>
+            <th>Preview</th>
+          </tr>
+        </thead>
+        <tbody> -->
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck10" /><span class="showNum">10</span></td>
+            <td>White</td>
+            <td><img class="thumbnail" src="gifs/show10.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck11" /><span class="showNum">11</span></td>
+            <td>Twinkle</td>
+            <td><img class="thumbnail" src="gifs/show11.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck12" /><span class="showNum">12</span></td>
+            <td>Strobe 1</td>
+            <td><img class="thumbnail" src="gifs/show12.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck13" /><span class="showNum">13</span></td>
+            <td>Strobe 2</td>
+            <td><img class="thumbnail" src="gifs/show13.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck14" /><span class="showNum">14</span></td>
+            <td>Strobe 3</td>
+            <td><img class="thumbnail" src="gifs/show14.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck15" /><span class="showNum">15</span></td>
+            <td>Chase 1</td>
+            <td><img class="thumbnail" src="gifs/show15.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck16" /><span class="showNum">16</span></td>
+            <td>Chase 2 (Cylon)</td>
+            <td><img class="thumbnail" src="gifs/show16.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck17" /><span class="showNum">17</span></td>
+            <td>Juggle</td>
+            <td><img class="thumbnail" src="gifs/show17.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck18" /><span class="showNum">18</span></td>
+            <td>USA</td>
+            <td><img class="thumbnail" src="gifs/show18.gif" width="46" height="34"/></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" checked="true" class="showCheck" id="showCheck19" /><span class="showNum">19</span></td>
+            <td>Altimeter</td>
+            <td><img class="thumbnail" src="gifs/show19.gif" width="46" height="34"/></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div id="downloads">
+      Download type:
+      <select id="firmwareType">
+        <optgroup label="v2 Board">
+          <option value="v2Full" selected>v2 Firmware + config</option>
+          <option value="v2Firmware">v2 Firmware only</option>
+          <option value="v2Config">v2 Config only</option>
+        </optgroup>
+        <optgroup label="v1 Board">
+          <option value="v1Full">v1 Firmware + config</option>
+          <option value="v1Firmware">v1 Firmware only</option>
+          <option value="v1Config">v1 Config only</option>
+        </optgroup>
+      </select>
+      <button type="button" id="download">Download</button>
+    </div>
+  </div>
+  
+  <script src="firmware.js"></script>
+  <script>
+    const verText = document.getElementById("version");
+    
+    const wing = document.getElementById("wing");
+    const nose = document.getElementById("nose");
+    const fuse = document.getElementById("fuse");
+    const tail = document.getElementById("tail");
+    const nav = document.getElementById("nav");
+    const wingRev = document.getElementById("wingRev");
+    const noseRev = document.getElementById("noseRev");
+    const fuseRev = document.getElementById("fuseRev");
+    const tailRev = document.getElementById("tailRev");
+    const noseFuseJoined = document.getElementById("noseFuseJoined");
+
+    const showChecks = document.getElementsByClassName("showCheck");
+
+    const firmwareType = document.getElementById("firmwareType");
+    const download = document.getElementById("download");
+    
+    let version = '';
+    fetch("firmware/version.txt")
+    .then(resp => resp.text())
+    .then(ver => {
+      version = ver;
+      verText.innerHTML = ver;
+    });
+
+    wing.addEventListener("change", (event) => {
+      nav.max = wing.valueAsNumber;
+      if (nav.valueAsNumber > wing.valueAsNumber) {
+        nav.valueAsNumber = wing.valueAsNumber;
+      }
+    });
+
+    firmwareType.addEventListener("change", (event) => {
+      for (const e of showChecks) {
+        e.disabled = firmwareType.value.startsWith("v1");
+      }
+    });
+
+    download.addEventListener("click", (event) => {
+      let layout = new Layout(
+        wing.valueAsNumber, nose.valueAsNumber, fuse.valueAsNumber,
+        tail.valueAsNumber, nav.valueAsNumber, wingRev.checked,
+        noseRev.checked, fuseRev.checked, tailRev.checked,
+        noseFuseJoined.checked
+      );
+
+      let checked = [];
+      for (const e of showChecks) {
+        checked.push(e.checked);
+      }
+      let settings = new Settings(checked);
+
+      startDownload(layout, settings, firmwareType.value, version);
+    });
+
+  </script>
+</body>
+</html>
